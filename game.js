@@ -15,7 +15,7 @@ function draw() {
 }
 
 function drawSnake() {
-    // update every SNAKE_SPEED frame
+    // Cập nhật SNAKE_SPEED
     if(frameCount % SNAKE_SPEED == 0)
     {
         snake.update();
@@ -26,7 +26,7 @@ function drawSnake() {
     food.show();
     snake.show();
 
-    // Handle when snake eat food
+    // Xử lý khi rắn ăn thức ăn
     if(snake.head.x == food.x && snake.head.y == food.y){
         eatFood();
     }

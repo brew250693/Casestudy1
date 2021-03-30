@@ -5,6 +5,7 @@ class Snake {
         this.length = 0;
         this.body = [];
         this.isDead = false;
+        this.diem = 0;
     }
     update(){
         this.body.push(createVector(this.head.x, this.head.y));
@@ -27,7 +28,8 @@ class Snake {
                 this.isDead = true;
             }
         }
-
+        this.diem = this.length;
+        document.getElementById("score").innerHTML = this.diem
     }
     show() {
         noStroke();
